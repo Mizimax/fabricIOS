@@ -79,8 +79,6 @@ class ViewController: UIViewController {
             button.layer.cornerRadius =  25
 
         }
-        
-        print("555");
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -133,7 +131,6 @@ extension ViewController: ARSCNViewDelegate {
         
         let plane = SCNPlane(width: referenceImage.physicalSize.width, height: referenceImage.physicalSize.height)
         let planeNode = SCNNode(geometry: plane)
-        planeNode.opacity = 0.20
         planeNode.eulerAngles.x = -.pi / 2
         if let videoURL = URL(string: "https://thaicolorid.com/vdo/11.mp4"){
             
