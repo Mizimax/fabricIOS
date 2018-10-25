@@ -79,6 +79,8 @@ class ViewController: UIViewController {
             button.layer.cornerRadius =  25
 
         }
+        
+        print("555");
     }
     
     override func viewWillAppear(_ animated: Bool) {
