@@ -9,15 +9,32 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, MyProtocol {
+    func pass(data: [String: Any]) {
+
+        let newViewController =
+                 self.storyboard?.instantiateViewController(withIdentifier: "HouseController") as! HouseController
+        newViewController.myHouse = data
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
     
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var QRButton: UIButton!
     
     let fadeDuration: TimeInterval = 0.3
     let rotateDuration: TimeInterval = 3
     let waitDuration: TimeInterval = 0.5
     
+
+    @IBAction func goQR(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "QRViewController") as! QRViewController
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
+    }
     lazy var fadeAndSpinAction: SCNAction = {
         return .sequence([
             .fadeIn(duration: fadeDuration),
@@ -69,22 +86,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont(name: "Prompt-Medium", size: 18)!]
+        
         sceneView.delegate = self
         setupScene()
         configureLighting()
         
-        if let button = self.view.viewWithTag(1) as? UIButton
-        {
-            
-            button.layer.cornerRadius =  25
+        
+        menuButton.layer.cornerRadius =  30
+        QRButton.layer.cornerRadius =  30
 
-        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupConfiguration()
         resetTrackingConfiguration()
+        
     }
     
     func setupScene() {
@@ -128,20 +148,17 @@ extension ViewController: ARSCNViewDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
         let imageName = referenceImage.name ?? "noname"
-        
+
         let plane = SCNPlane(width: referenceImage.physicalSize.width, height: referenceImage.physicalSize.height)
         let planeNode = SCNNode(geometry: plane)
         planeNode.eulerAngles.x = -.pi / 2
-        if let videoURL = URL(string: "https://thaicolorid.com/vdo/11.mp4"){
+        if let videoURL = URL(string: "https://thaicolorid.com/vdoar/" + imageName[...1] + "/" + imageName[2...] + ".mp4"){
             
             setupVideoOnNode(planeNode, fromURL: videoURL)
         }
 //        planeNode.runAction(imageHighlightAction)
 
         node.addChildNode(planeNode)
-        DispatchQueue.main.async {
-            self.label.text = "Image detected: \"\(imageName)\""
-        }
     }
     
     func setupVideoOnNode(_ node: SCNNode, fromURL url: URL){
@@ -151,6 +168,10 @@ extension ViewController: ARSCNViewDelegate {
         
         //2. Create An AVPlayer With Our Video URL
         let videoPlayer = AVPlayer(url: url)
+        let nodes = ["node": node]
+        NotificationCenter.default.post(name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil, userInfo: nodes)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
+
         
         //3. Intialize The Video Node With Our Video Player
         videoPlayerNode = SKVideoNode(avPlayer: videoPlayer)
@@ -169,30 +190,61 @@ extension ViewController: ARSCNViewDelegate {
         //5. Play The Video
         videoPlayerNode.play()
         videoPlayer.volume = 0
+    
+    }
+    
+    @objc func playerDidFinishPlaying(_ note: NSNotification) {
         
-    }
-    
-    
-    func getPlaneNode(withReferenceImage image: ARReferenceImage) -> SCNNode {
-        let plane = SCNPlane(width: image.physicalSize.width,
-                             height: image.physicalSize.height)
-        let node = SCNNode(geometry: plane)
-        return node
-    }
-    
-    func getNode(withImageName name: String) -> SCNNode {
-        var node = SCNNode()
-        switch name {
-        case "Book":
-            node = bookNode
-        case "Snow Mountain":
-            node = mountainNode
-        case "Trees In the Dark":
-            node = treeNode
-        default:
-            break
+        print(note.userInfo?["node"])
+        print("444")
+        if let target = note.userInfo?["node"] as? SCNNode {
+            target.isHidden = true
         }
-        return node
     }
     
+
+
+}
+
+
+extension String {
+    subscript(value: NSRange) -> Substring {
+        return self[value.lowerBound..<value.upperBound]
+    }
+}
+
+extension String {
+    subscript(value: CountableClosedRange<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)...index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: CountableRange<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)..<index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeUpTo<Int>) -> Substring {
+        get {
+            return self[..<index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeThrough<Int>) -> Substring {
+        get {
+            return self[...index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeFrom<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)...]
+        }
+    }
+    
+    func index(at offset: Int) -> String.Index {
+        return index(startIndex, offsetBy: offset)
+    }
 }

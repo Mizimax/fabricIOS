@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/jayvennhan/Desktop/Image Recognition/ARKitImageRecognition.xcodeproj">
+      location = "group:/Users/max/Downloads/StarterProject/ARKitImageRecognition/Info.plist">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

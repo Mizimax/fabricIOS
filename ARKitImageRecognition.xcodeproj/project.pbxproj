@@ -7,28 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5054026621851D9200509C51 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5054026521851D9200509C51 /* QRViewController.swift */; };
+		50C18D44218B6BF6000535A7 /* HouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C18D43218B6BF6000535A7 /* HouseController.swift */; };
+		50D4A8F72191BB0D00AE1F4F /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4A8F62191BB0D00AE1F4F /* GalleryController.swift */; };
 		50F2E73C2181F71500F842B2 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E73B2181F71500F842B2 /* ListController.swift */; };
-		6321720A207CAAA000A39F41 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63217207207CAAA000A39F41 /* book.jpg */; };
-		6321721D207CCAD300A39F41 /* mountain.scn in Resources */ = {isa = PBXBuildFile; fileRef = 6321721C207CC86800A39F41 /* mountain.scn */; };
-		63217221207CCCED00A39F41 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 63217220207CCCED00A39F41 /* tree.png */; };
-		63217230207CD49400A39F41 /* book.scn in Resources */ = {isa = PBXBuildFile; fileRef = 6321722F207CD3F100A39F41 /* book.scn */; };
-		63217231207CD49D00A39F41 /* tree.scn in Resources */ = {isa = PBXBuildFile; fileRef = 63217222207CCD0100A39F41 /* tree.scn */; };
-		63217233207CF6CD00A39F41 /* 3D Models Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = 63217232207CF66C00A39F41 /* 3D Models Credits.md */; };
+		50F5CD91219831A10049C1DB /* Prompt-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50F5CD742198246D0049C1DB /* Prompt-Medium.ttf */; };
+		50F5CD92219831A40049C1DB /* rufflescript-demo-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50F5CD732198246D0049C1DB /* rufflescript-demo-webfont.ttf */; };
+		50F5CD93219831A80049C1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B119242060F29400A7E3BD /* Main.storyboard */; };
+		50F5CD94219831AC0049C1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B119272060F29400A7E3BD /* Assets.xcassets */; };
 		63B119212060F29400A7E3BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B119202060F29400A7E3BD /* AppDelegate.swift */; };
 		63B119232060F29400A7E3BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B119222060F29400A7E3BD /* ViewController.swift */; };
-		63B119262060F29400A7E3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B119242060F29400A7E3BD /* Main.storyboard */; };
-		63B119282060F29400A7E3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B119272060F29400A7E3BD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5054026521851D9200509C51 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		50C18D43218B6BF6000535A7 /* HouseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseController.swift; sourceTree = "<group>"; };
+		50D4A8F62191BB0D00AE1F4F /* GalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
 		50F2E73B2181F71500F842B2 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
-		63217207207CAAA000A39F41 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
-		6321721C207CC86800A39F41 /* mountain.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mountain.scn; sourceTree = "<group>"; };
-		63217220207CCCED00A39F41 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
-		63217222207CCD0100A39F41 /* tree.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = tree.scn; sourceTree = "<group>"; };
-		6321722F207CD3F100A39F41 /* book.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = book.scn; sourceTree = "<group>"; };
-		63217232207CF66C00A39F41 /* 3D Models Credits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "3D Models Credits.md"; sourceTree = "<group>"; };
-		63B1191D2060F29400A7E3BD /* ARKitImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F5CD732198246D0049C1DB /* rufflescript-demo-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rufflescript-demo-webfont.ttf"; sourceTree = "<group>"; };
+		50F5CD742198246D0049C1DB /* Prompt-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prompt-Medium.ttf"; sourceTree = "<group>"; };
+		50F5CD8A21982D050049C1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/max/Downloads/StarterProject/ARKitImageRecognition/Info.plist; sourceTree = "<absolute>"; };
+		63B1191D2060F29400A7E3BD /* ColorID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B119202060F29400A7E3BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B119222060F29400A7E3BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63B119252060F29400A7E3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,43 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		632171E2207C9ED700A39F41 /* 3D Models */ = {
-			isa = PBXGroup;
-			children = (
-				63217232207CF66C00A39F41 /* 3D Models Credits.md */,
-				63217201207CAA5800A39F41 /* Book */,
-				632171EC207CA01300A39F41 /* Mountain */,
-				632171E3207C9EF300A39F41 /* Tree */,
-			);
-			path = "3D Models";
-			sourceTree = "<group>";
-		};
-		632171E3207C9EF300A39F41 /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-				63217220207CCCED00A39F41 /* tree.png */,
-				63217222207CCD0100A39F41 /* tree.scn */,
-			);
-			path = Tree;
-			sourceTree = "<group>";
-		};
-		632171EC207CA01300A39F41 /* Mountain */ = {
-			isa = PBXGroup;
-			children = (
-				6321721C207CC86800A39F41 /* mountain.scn */,
-			);
-			path = Mountain;
-			sourceTree = "<group>";
-		};
-		63217201207CAA5800A39F41 /* Book */ = {
-			isa = PBXGroup;
-			children = (
-				63217207207CAAA000A39F41 /* book.jpg */,
-				6321722F207CD3F100A39F41 /* book.scn */,
-			);
-			path = Book;
-			sourceTree = "<group>";
-		};
 		63B119142060F29400A7E3BD = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +56,7 @@
 		63B1191E2060F29400A7E3BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63B1191D2060F29400A7E3BD /* ARKitImageRecognition.app */,
+				63B1191D2060F29400A7E3BD /* ColorID.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,12 +64,17 @@
 		63B1191F2060F29400A7E3BD /* ARKitImageRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				632171E2207C9ED700A39F41 /* 3D Models */,
+				50F5CD8A21982D050049C1DB /* Info.plist */,
+				50F5CD742198246D0049C1DB /* Prompt-Medium.ttf */,
+				50F5CD732198246D0049C1DB /* rufflescript-demo-webfont.ttf */,
 				63B119202060F29400A7E3BD /* AppDelegate.swift */,
 				63B119222060F29400A7E3BD /* ViewController.swift */,
 				63B119242060F29400A7E3BD /* Main.storyboard */,
 				63B119272060F29400A7E3BD /* Assets.xcassets */,
 				50F2E73B2181F71500F842B2 /* ListController.swift */,
+				5054026521851D9200509C51 /* QRViewController.swift */,
+				50C18D43218B6BF6000535A7 /* HouseController.swift */,
+				50D4A8F62191BB0D00AE1F4F /* GalleryController.swift */,
 			);
 			path = ARKitImageRecognition;
 			sourceTree = "<group>";
@@ -121,7 +88,7 @@
 			buildPhases = (
 				63B119192060F29400A7E3BD /* Sources */,
 				63B1191A2060F29400A7E3BD /* Frameworks */,
-				63B1191B2060F29400A7E3BD /* Resources */,
+				50F5CD90219831960049C1DB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -129,7 +96,7 @@
 			);
 			name = ARKitImageRecognition;
 			productName = "Image Recognition";
-			productReference = 63B1191D2060F29400A7E3BD /* ARKitImageRecognition.app */;
+			productReference = 63B1191D2060F29400A7E3BD /* ColorID.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,18 +134,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		63B1191B2060F29400A7E3BD /* Resources */ = {
+		50F5CD90219831960049C1DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63217230207CD49400A39F41 /* book.scn in Resources */,
-				63217231207CD49D00A39F41 /* tree.scn in Resources */,
-				6321721D207CCAD300A39F41 /* mountain.scn in Resources */,
-				63B119282060F29400A7E3BD /* Assets.xcassets in Resources */,
-				63B119262060F29400A7E3BD /* Main.storyboard in Resources */,
-				6321720A207CAAA000A39F41 /* book.jpg in Resources */,
-				63217233207CF6CD00A39F41 /* 3D Models Credits.md in Resources */,
-				63217221207CCCED00A39F41 /* tree.png in Resources */,
+				50F5CD94219831AC0049C1DB /* Assets.xcassets in Resources */,
+				50F5CD93219831A80049C1DB /* Main.storyboard in Resources */,
+				50F5CD92219831A40049C1DB /* rufflescript-demo-webfont.ttf in Resources */,
+				50F5CD91219831A10049C1DB /* Prompt-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D4A8F72191BB0D00AE1F4F /* GalleryController.swift in Sources */,
 				63B119232060F29400A7E3BD /* ViewController.swift in Sources */,
+				50C18D44218B6BF6000535A7 /* HouseController.swift in Sources */,
 				63B119212060F29400A7E3BD /* AppDelegate.swift in Sources */,
 				50F2E73C2181F71500F842B2 /* ListController.swift in Sources */,
+				5054026621851D9200509C51 /* QRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +292,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y29J9N2NR9;
+				DEVELOPMENT_TEAM = VFKRKADP72;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitImageRecognition/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.ARKitImageRecognition;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabric.colorid;
+				PRODUCT_MODULE_NAME = ColorID;
+				PRODUCT_NAME = ColorID;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -342,12 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y29J9N2NR9;
+				DEVELOPMENT_TEAM = VFKRKADP72;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitImageRecognition/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.ARKitImageRecognition;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabric.colorid;
+				PRODUCT_MODULE_NAME = ColorID;
+				PRODUCT_NAME = ColorID;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
