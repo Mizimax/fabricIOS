@@ -170,7 +170,7 @@ extension ViewController: ARSCNViewDelegate {
         let videoPlayer = AVPlayer(url: url)
         let nodes = ["node": node]
         NotificationCenter.default.post(name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil, userInfo: nodes)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: node )
 
         
         //3. Intialize The Video Node With Our Video Player
@@ -195,11 +195,9 @@ extension ViewController: ARSCNViewDelegate {
     
     @objc func playerDidFinishPlaying(_ note: NSNotification) {
         
-        print(note.userInfo?["node"])
-        print("444")
-        if let target = note.userInfo?["node"] as? SCNNode {
-            target.isHidden = true
-        }
+        let plane = note.object as! SCNNode
+        print(plane)
+        plane.removeFromParentNode()
     }
     
 

@@ -110,6 +110,7 @@ class HouseController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var mapLabel: UILabel!
     
@@ -199,6 +200,8 @@ class HouseController: UIViewController {
             
             yColor += 38
         }
+        
+        
        
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -224,7 +227,17 @@ class HouseController: UIViewController {
         detailLabel.sizeToFit()
         detailLabel.font = UIFont(name: detailLabel.font.fontName, size: 12)
         
+        
+        
         self.colorView.addSubview(detailLabel)
+        
+        let heightConstraint = NSLayoutConstraint(item: colorView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: yColor+70+detailLabel.frame.height)
+        colorView.addConstraint(heightConstraint)
+    
+//    self.colorView.frame = CGRect(x: 0 , y: 0, width: self.contentView.frame.width, height: yColor+50+detailLabel.frame.height)
+//    print(self.colorView.frame.height)
+        
+//        self.colorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
         
         
         self.profileImage.maskCirclePercentage(percent: 0.33, parent: self.view)
@@ -235,7 +248,9 @@ class HouseController: UIViewController {
         modalClose.isUserInteractionEnabled = true
         modalClose.addGestureRecognizer(tapGestureRecognizer)
         
+        self.view.bringSubview(toFront: colorView)
         //        self.colorView.frame.size.height = self.view.frame.size.height - self.colorView.frame.origin.y
+        
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -261,6 +276,7 @@ class HouseController: UIViewController {
     }
     
     @objc func addTapped() {
+        
         let pushView = self.storyboard?.instantiateViewController(withIdentifier: "GalleryController") as! GalleryController
         pushView.houseGallery = self.imageList
         pushView.houseVideo = self.houseVideo
@@ -276,7 +292,8 @@ class HouseController: UIViewController {
 
     @objc func imageTapped(sender : MyTapGesture) {
         // your code goes here
-        
+        print(scrollView.frame.size.height)
+        print(colorView.superview!.frame.size.height)
         let colorTxt = sender.houseColor["color_text"] as! String
         houseColorDetail.attributedText = colorTxt.html2AttributedString
         houseColorDetail.numberOfLines = 0
@@ -287,7 +304,7 @@ class HouseController: UIViewController {
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
+        blurEffectView.frame = contentView.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         scrollView.addSubview(blurEffectView)
         scrollView.bringSubview(toFront: modalView)
