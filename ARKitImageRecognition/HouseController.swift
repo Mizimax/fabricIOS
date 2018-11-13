@@ -90,12 +90,16 @@ class MyTapGesture: UITapGestureRecognizer {
 }
 
 class HouseController: UIViewController {
+    @IBOutlet weak var badgeView: UIView!
+    @IBOutlet weak var telBtn: UIView!
     
+    @IBOutlet weak var badgeClose: UIImageView!
     @IBOutlet weak var modalClose: UIImageView!
     @IBOutlet weak var houseColorDetail: UILabel!
     
     @IBOutlet weak var houseColor: UIImageView!
     
+    @IBOutlet weak var mapLogo: UIView!
     
     @IBOutlet weak var modalHouse: UILabel!
     @IBOutlet weak var houseNameLabel: UILabel!
@@ -127,14 +131,48 @@ class HouseController: UIViewController {
      
             afterLoadHouse()
     
+        let tapGestureRecognizers = MyTapGesture(target: self, action: #selector(flagTapped))
+        flagImage.isUserInteractionEnabled = true
+        flagImage.addGestureRecognizer(tapGestureRecognizers)
        
+        let tapGestureRecognizer = MyTapGesture(target: self, action: #selector(mapTapped))
+        mapLogo.isUserInteractionEnabled = true
+        mapLogo.addGestureRecognizer(tapGestureRecognizer)
+        
+        let tapGestureRecognizeer = MyTapGesture(target: self, action: #selector(tel))
+        telBtn.isUserInteractionEnabled = true
+        telBtn.addGestureRecognizer(tapGestureRecognizeer)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func tel() {
+        let telNum = myHouse["house_phone"] as! String
+        UIApplication.shared.openURL(NSURL(string: "tel://"+telNum)! as URL)
+    }
+    
+    @objc func flagTapped() {
+        scrollView.addSubview(blurEffectView)
+        scrollView.bringSubview(toFront: badgeView)
+        badgeView.isHidden = false
+    }
+    
+    @objc func mapTapped() {
+        guard let url = URL(string: self.myHouse["house_address_url"] as! String) else {
+            return //be safe
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
 
     
     func afterLoadHouse() {
         modalView.isHidden = true
+        badgeView.isHidden = true
         
         self.mapLabel.text = self.myHouse["house_province"] as! String
         self.phoneLabel.text = self.myHouse["house_phone"] as! String
@@ -142,6 +180,7 @@ class HouseController: UIViewController {
         
         
         self.modalView.layer.cornerRadius = 30
+        self.badgeView.layer.cornerRadius = 30
         
         self.scrollView.isScrollEnabled = true
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height:2300)
@@ -248,6 +287,12 @@ class HouseController: UIViewController {
         modalClose.isUserInteractionEnabled = true
         modalClose.addGestureRecognizer(tapGestureRecognizer)
         
+        let tapGestureRecognizerr = UITapGestureRecognizer(target: self, action: #selector(closeModall))
+        badgeClose.isUserInteractionEnabled = true
+        badgeClose.addGestureRecognizer(tapGestureRecognizerr)
+        
+     
+        
         self.view.bringSubview(toFront: colorView)
         //        self.colorView.frame.size.height = self.view.frame.size.height - self.colorView.frame.origin.y
         
@@ -284,6 +329,12 @@ class HouseController: UIViewController {
         
     }
     
+    @objc func closeModall() {
+        badgeView.isHidden = true
+        blurEffectView.removeFromSuperview()
+        
+    }
+    
     @objc func closeModal() {
         modalView.isHidden = true
         blurEffectView.removeFromSuperview()
@@ -292,8 +343,7 @@ class HouseController: UIViewController {
 
     @objc func imageTapped(sender : MyTapGesture) {
         // your code goes here
-        print(scrollView.frame.size.height)
-        print(colorView.superview!.frame.size.height)
+        
         let colorTxt = sender.houseColor["color_text"] as! String
         houseColorDetail.attributedText = colorTxt.html2AttributedString
         houseColorDetail.numberOfLines = 0
