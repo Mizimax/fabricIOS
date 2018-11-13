@@ -375,7 +375,7 @@
                                                     <constraint firstAttribute="height" constant="100" id="vCS-2n-20k"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 80% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือประณีต มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-1G-8Fa">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 50% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือดี มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-1G-8Fa">
                                                 <rect key="frame" x="108" y="204.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -388,7 +388,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="ghy-Tb-JS5"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 80% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือประณีต มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNw-u9-0Nb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 30% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือดี" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNw-u9-0Nb">
                                                 <rect key="frame" x="108" y="312.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -401,7 +401,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="f02-GJ-ACd"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 80% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือประณีต มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsC-q6-WSO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 20% ย้อมสีธรรมชาติ ฝีมือดี มีศักยภาพในการพัฒนาในอนาคต" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsC-q6-WSO">
                                                 <rect key="frame" x="108" y="410.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
