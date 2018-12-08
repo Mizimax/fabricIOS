@@ -297,7 +297,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitImageRecognition/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thai.colorid.com.haha;
+				PRODUCT_BUNDLE_IDENTIFIER = thai.colorid.com.haha2;
 				PRODUCT_MODULE_NAME = ColorID;
 				PRODUCT_NAME = ColorID;
 				SWIFT_VERSION = 4.0;
@@ -315,7 +315,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitImageRecognition/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thai.colorid.com.haha;
+				PRODUCT_BUNDLE_IDENTIFIER = thai.colorid.com.haha2;
 				PRODUCT_MODULE_NAME = ColorID;
 				PRODUCT_NAME = ColorID;
 				SWIFT_VERSION = 4.0;

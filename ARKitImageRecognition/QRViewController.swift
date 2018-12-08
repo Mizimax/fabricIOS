@@ -15,6 +15,11 @@ protocol MyProtocol {
 
 
 class QRViewController: UIViewController {
+    @IBOutlet weak var privacyLable: UILabel!
+    @IBOutlet weak var questionImage: UIImageView!
+    @IBOutlet weak var howModal: UIView!
+    @IBOutlet weak var closeModal: UIImageView!
+    @IBOutlet weak var innerModal: UIView!
     
     var captureSession:AVCaptureSession? = AVCaptureSession()
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -29,9 +34,59 @@ class QRViewController: UIViewController {
     var delegate:MyProtocol?
     var myHouse: [String: Any] = [:]
 
+    @objc func tapPrivacy() {
+        guard let url = URL(string: "https://thaicolorid.com/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
+            return //be safe
+        }; UIApplication.shared.openURL(url);
+        
+    }
+    
+    @objc func tapQuestion() {
+        howModal.isHidden = false
+        
+    }
+    
+    @objc func tapCloseModal() {
+        howModal.isHidden = true
+        let alertController = UIAlertController(title: "Important !", message: "Colorid need camera permission to scan QR code. App will show house detail", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+                //                if response {
+                //                    //access granted
+                //
+                //                } else {
+                //
+                //                }
+            }
+        }
+        
+        alertController.addAction(action1)
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    
         //call the func in the previous vc
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        howModal.isHidden = false;
+        
+        let tapPrivacy = UITapGestureRecognizer(target: self, action: #selector(self.tapPrivacy))
+        privacyLable.isUserInteractionEnabled = true
+        privacyLable.addGestureRecognizer(tapPrivacy)
+        
+        let tapQuestion = UITapGestureRecognizer(target: self, action: #selector(self.tapQuestion))
+        questionImage.isUserInteractionEnabled = true
+        questionImage.addGestureRecognizer(tapQuestion)
+        
+        let tapCloseModal = UITapGestureRecognizer(target: self, action: #selector(self.tapCloseModal))
+        closeModal.isUserInteractionEnabled = true
+        closeModal.addGestureRecognizer(tapCloseModal)
+        
+        innerModal.layer.cornerRadius = 30
+        
         pushView = self.storyboard?.instantiateViewController(withIdentifier: "HouseController") as! HouseController
         // Get the back-facing camera for capturing videos
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
@@ -76,6 +131,8 @@ class QRViewController: UIViewController {
         // Move the message label and top bar to the front
         view.bringSubview(toFront: messageLabel)
         view.bringSubview(toFront: toolbarView)
+        view.bringSubview(toFront: questionImage)
+        view.bringSubview(toFront: privacyLable)
         
         
         // Initialize QR Code Frame to highlight the QR code
@@ -87,8 +144,11 @@ class QRViewController: UIViewController {
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
         }
+        
     }
-
+   
+    
+    
     
 
     /*

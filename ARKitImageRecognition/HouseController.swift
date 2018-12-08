@@ -143,6 +143,8 @@ class HouseController: UIViewController {
         telBtn.isUserInteractionEnabled = true
         telBtn.addGestureRecognizer(tapGestureRecognizeer)
         // Do any additional setup after loading the view.
+        
+       
     }
     
     @objc func tel() {

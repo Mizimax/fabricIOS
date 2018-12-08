@@ -18,7 +18,12 @@ class ViewController: UIViewController, MyProtocol {
         newViewController.myHouse = data
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
+    @IBOutlet weak var closeModal: UIImageView!
+    @IBOutlet weak var innerModal: UIView!
     
+    @IBOutlet weak var privacyLabel: UILabel!
+    @IBOutlet weak var questionButton: UIImageView!
+    @IBOutlet weak var howModal: UIView!
     
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var menuButton: UIButton!
@@ -84,27 +89,95 @@ class ViewController: UIViewController, MyProtocol {
 //        self.navigationController?.pushViewController(newViewController, animated: true)
     }
     
+    @objc func tapPrivacy() {
+        guard let url = URL(string: "https://thaicolorid.com/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
+            return //be safe
+        }; UIApplication.shared.openURL(url);
+        
+    }
+    
+    @objc func tapQuestion() {
+
+        howModal.isHidden = false
+    }
+    
+    @objc func tapCloseModal() {
+        howModal.isHidden = true;
+        sceneView.isHidden = false;
+        let alertController = UIAlertController(title: "Important !", message: "Colorid need camera permission to show Augmented Reality video. Augmented Reality Technology need", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+                //                if response {
+                //                    //access granted
+                //
+                //                } else {
+                //
+                //                }
+            }
+        }
+        
+        alertController.addAction(action1)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    @IBAction func goToSetting(_ sender: Any) {
+        goSetting()
+    }
+    
+    func goSetting() {
+        let alertController = UIAlertController (title: "To access camera", message: "Please go to setting to turn on permiss", preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+            
+            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    print("Settings opened: \(success)") // Prints true
+                })
+            }
+        }
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        howModal.isHidden = false;
+        
+        let tapPrivacy = UITapGestureRecognizer(target: self, action: #selector(self.tapPrivacy))
+        privacyLabel.isUserInteractionEnabled = true
+        privacyLabel.addGestureRecognizer(tapPrivacy)
+        let tapCloseModal = UITapGestureRecognizer(target: self, action: #selector(self.tapCloseModal))
+        closeModal.isUserInteractionEnabled = true
+        closeModal.addGestureRecognizer(tapCloseModal)
+        
+        let tapQuestion = UITapGestureRecognizer(target: self, action: #selector(self.tapQuestion))
+        questionButton.isUserInteractionEnabled = true
+        questionButton.addGestureRecognizer(tapQuestion)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont(name: "Prompt-Medium", size: 18)!]
         
         sceneView.delegate = self
         setupScene()
         configureLighting()
         
-        
+        innerModal.layer.cornerRadius = 30
         menuButton.layer.cornerRadius =  30
         QRButton.layer.cornerRadius =  30
 
-        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupConfiguration()
         resetTrackingConfiguration()
-        
     }
     
     func setupScene() {
