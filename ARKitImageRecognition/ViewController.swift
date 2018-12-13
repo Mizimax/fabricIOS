@@ -24,7 +24,9 @@ class ViewController: UIViewController, MyProtocol {
     @IBOutlet weak var privacyLabel: UILabel!
     @IBOutlet weak var questionButton: UIImageView!
     @IBOutlet weak var howModal: UIView!
+    @IBOutlet weak var menuImage: UIImageView!
     
+    @IBOutlet weak var qrImage: UIImageView!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var QRButton: UIButton!
@@ -102,23 +104,34 @@ class ViewController: UIViewController, MyProtocol {
     }
     
     @objc func tapCloseModal() {
-        howModal.isHidden = true;
+        innerModal.isHidden = true;
         sceneView.isHidden = false;
-        let alertController = UIAlertController(title: "Important !", message: "Colorid need camera permission to show Augmented Reality video. Augmented Reality Technology need", preferredStyle: .alert)
-        
+        self.view.bringSubview(toFront: menuButton)
+        self.view.bringSubview(toFront: menuImage)
+        let alertController = UIAlertController(title: "Instruction", message: "Left corner button is menu to show all houses", preferredStyle: .alert)
+
         let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-                //                if response {
-                //                    //access granted
-                //
-                //                } else {
-                //
-                //                }
+            self.view.bringSubview(toFront: self.howModal)
+            self.view.bringSubview(toFront: self.QRButton)
+            self.view.bringSubview(toFront: self.qrImage)
+            let alertController2 = UIAlertController(title: "Instruction", message: "Right corner button is menu to show qr page", preferredStyle: .alert)
+            
+            let action2 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                self.howModal.isHidden = true;
+                
+                self.view.bringSubview(toFront: self.menuButton);
+                self.view.bringSubview(toFront: self.menuImage);
+                self.view.bringSubview(toFront: self.QRButton)
+                self.view.bringSubview(toFront: self.qrImage)
             }
+            alertController2.addAction(action2)
+            self.present(alertController2, animated: true, completion: nil)
         }
-        
+
         alertController.addAction(action1)
         self.present(alertController, animated: true, completion: nil)
+        UserDefaults.standard.set(true, forKey: "termsAccepted")
+        
     }
     @IBAction func goToSetting(_ sender: Any) {
         goSetting()
@@ -149,8 +162,9 @@ class ViewController: UIViewController, MyProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        howModal.isHidden = false;
-        
+        if(!UserDefaults.standard.bool(forKey: "termsAccepted")){
+            howModal.isHidden = false;
+        }
         let tapPrivacy = UITapGestureRecognizer(target: self, action: #selector(self.tapPrivacy))
         privacyLabel.isUserInteractionEnabled = true
         privacyLabel.addGestureRecognizer(tapPrivacy)

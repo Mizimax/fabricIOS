@@ -63,6 +63,7 @@ class QRViewController: UIViewController {
         
         alertController.addAction(action1)
         self.present(alertController, animated: true, completion: nil)
+        UserDefaults.standard.set(true, forKey: "qrAccepted")
     }
 
     
@@ -71,7 +72,9 @@ class QRViewController: UIViewController {
         super.viewDidLoad()
         
         
-        howModal.isHidden = false;
+        if(!UserDefaults.standard.bool(forKey: "qrAccepted")){
+            howModal.isHidden = false;
+        }
         
         let tapPrivacy = UITapGestureRecognizer(target: self, action: #selector(self.tapPrivacy))
         privacyLable.isUserInteractionEnabled = true

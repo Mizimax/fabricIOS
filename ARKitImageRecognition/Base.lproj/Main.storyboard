@@ -195,7 +195,9 @@
                         <outlet property="howModal" destination="beY-oN-Vai" id="BKO-B0-zIQ"/>
                         <outlet property="innerModal" destination="XDM-5j-MFL" id="ISA-oh-IWa"/>
                         <outlet property="menuButton" destination="kgO-r5-FRr" id="2KF-9W-311"/>
+                        <outlet property="menuImage" destination="Q9V-zX-BOa" id="er8-al-jSd"/>
                         <outlet property="privacyLabel" destination="aev-AU-lef" id="5tv-Lu-p1R"/>
+                        <outlet property="qrImage" destination="BoD-py-0T5" id="UyO-We-uOS"/>
                         <outlet property="questionButton" destination="IAI-AE-Wty" id="2Ue-Kt-Rnx"/>
                         <outlet property="sceneView" destination="KdE-5q-u14" id="tTh-pN-MID"/>
                     </connections>
