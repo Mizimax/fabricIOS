@@ -26,6 +26,7 @@ class ViewController: UIViewController, MyProtocol {
     @IBOutlet weak var howModal: UIView!
     @IBOutlet weak var menuImage: UIImageView!
     
+    
     @IBOutlet weak var qrImage: UIImageView!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var menuButton: UIButton!
@@ -35,7 +36,18 @@ class ViewController: UIViewController, MyProtocol {
     let rotateDuration: TimeInterval = 3
     let waitDuration: TimeInterval = 0.5
     
-
+    @IBOutlet weak var right: UIImageView!
+    @IBOutlet weak var left: UIImageView!
+    @IBOutlet weak var rightArrow: UIImageView!
+    @IBOutlet weak var leftArrow: UIImageView!
+    
+    @IBAction func download(_ sender: Any) {
+        guard let url = URL(string: "https://thaicolorid.com/postcard/1.png" as! String) else {
+            return //be safe
+        }; UIApplication.shared.openURL(url);
+    
+    }
+    
     @IBAction func goQR(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "QRViewController") as! QRViewController
@@ -101,28 +113,46 @@ class ViewController: UIViewController, MyProtocol {
     @objc func tapQuestion() {
 
         howModal.isHidden = false
+        innerModal.isHidden = false
+        self.view.bringSubview(toFront: self.howModal)
     }
     
     @objc func tapCloseModal() {
         innerModal.isHidden = true;
         sceneView.isHidden = false;
+        leftArrow.isHidden = false;
+        left.isHidden = false;
+        self.view.bringSubview(toFront: self.left)
+        self.view.bringSubview(toFront: self.leftArrow)
         self.view.bringSubview(toFront: menuButton)
         self.view.bringSubview(toFront: menuImage)
-        let alertController = UIAlertController(title: "Instruction", message: "Left corner button is menu to show all houses", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Suggestion", message: "This is a button that will show house list", preferredStyle: .alert)
 
         let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            
+            self.rightArrow.isHidden = false;
+            self.right.isHidden = false;
+            self.left.isHidden = true;
+            self.leftArrow.isHidden = true;
             self.view.bringSubview(toFront: self.howModal)
             self.view.bringSubview(toFront: self.QRButton)
             self.view.bringSubview(toFront: self.qrImage)
-            let alertController2 = UIAlertController(title: "Instruction", message: "Right corner button is menu to show qr page", preferredStyle: .alert)
+            self.view.bringSubview(toFront: self.right)
+            self.view.bringSubview(toFront: self.rightArrow)
+            let alertController2 = UIAlertController(title: "Suggestion", message: "This is a button that will go to QR scanner to show specific house with QR code", preferredStyle: .alert)
             
             let action2 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
                 self.howModal.isHidden = true;
-                
+                self.right.isHidden = true;
+                self.rightArrow.isHidden = true;
                 self.view.bringSubview(toFront: self.menuButton);
                 self.view.bringSubview(toFront: self.menuImage);
                 self.view.bringSubview(toFront: self.QRButton)
                 self.view.bringSubview(toFront: self.qrImage)
+                let alertController3 = UIAlertController(title: "Important !", message: "Colorid need camera permission to show Augmented Reality video. Augmented Realit (ARKit) is supported on devices with A9 or later processor which includes: iPhone 6s and later, iPhone SE, Any iPad Pro and iPad 2017 and later", preferredStyle: .alert)
+                 let action3 = UIAlertAction(title: "OK", style: .default)
+                alertController3.addAction(action3)
+                self.present(alertController3, animated: true, completion: nil)
             }
             alertController2.addAction(action2)
             self.present(alertController2, animated: true, completion: nil)

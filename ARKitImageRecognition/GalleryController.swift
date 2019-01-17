@@ -79,12 +79,11 @@ class GalleryController: UIViewController, UICollectionViewDataSource, UICollect
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        image = UIImageView(frame: CGRect(x: 35, y: -100, width: view.bounds.size.width-70, height: view.bounds.size.height))
-        
+      
+        image = UIImageView(frame: CGRect(x: 0, y: 0, width: 315, height: 200))
         image.downloadImageFrom(link: houseGallery[indexPath.row], contentMode: UIViewContentMode.scaleAspectFit)
         
-        close = UIImageView(frame: CGRect(x: view.center.x-25, y: view.center.y+100, width: 50, height: 50))
+        close = UIImageView(frame: CGRect(x: view.center.x-25, y: 400, width: 50, height: 50))
         close.image = #imageLiteral(resourceName: "close")
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         close.isUserInteractionEnabled = true
@@ -94,6 +93,18 @@ class GalleryController: UIViewController, UICollectionViewDataSource, UICollect
         view.addSubview(blurEffectView)
         view.addSubview(image)
         view.addSubview(close)
+        
+        image.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint = NSLayoutConstraint(item: image, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let widthConstraint = NSLayoutConstraint(item: image, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 315)
+        let topConstraint = NSLayoutConstraint(item: image, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 150)
+        let closeConstraint = NSLayoutConstraint(item: close, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: image, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 50)
+        
+        view.addConstraint(horizontalConstraint);
+         view.addConstraint(widthConstraint);
+        view.addConstraint(topConstraint);
+        view.addConstraint(closeConstraint);
+        
         
         
     }
