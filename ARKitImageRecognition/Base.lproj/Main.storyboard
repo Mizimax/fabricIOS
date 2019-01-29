@@ -400,7 +400,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Zo3-JR-Woc" secondAttribute="trailing" id="12V-n8-xYA"/>
                                                     <constraint firstItem="Zo3-JR-Woc" firstAttribute="top" secondItem="hxs-Fd-9bZ" secondAttribute="top" constant="24" id="B4w-n3-KoA"/>
@@ -412,26 +412,27 @@
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWJ-sI-QNA">
-                                                <rect key="frame" x="10.000000000000007" y="185.66666666666669" width="118.66666666666669" height="135.66666666666669"/>
+                                                <rect key="frame" x="10" y="185.66666666666663" width="125" height="143"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="175" id="fbC-i1-1V7"/>
                                                     <constraint firstAttribute="width" secondItem="BWJ-sI-QNA" secondAttribute="height" multiplier="83:95" id="kZL-f5-skq"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-pU-D5i">
-                                                <rect key="frame" x="138.66666666666669" y="188.33333333333337" width="136.66666666666669" height="136.66666666666663"/>
+                                                <rect key="frame" x="145" y="188.33333333333334" width="124" height="124.33333333333334"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HyE-pU-D5i" secondAttribute="height" multiplier="1:1" id="odJ-oC-FdZ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="color id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-pI-1XR">
-                                                <rect key="frame" x="0.0" y="392.33333333333331" width="414" height="24"/>
+                                                <rect key="frame" x="0.0" y="380" width="414" height="24"/>
                                                 <fontDescription key="fontDescription" name="RuffleScriptDEMO-Regular" family="Ruffle Script DEMO" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oww-kk-0JQ">
-                                                <rect key="frame" x="0.0" y="347" width="414" height="30.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="334.66666666666669" width="414" height="30.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -459,7 +460,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="SNg-y2-o6A" firstAttribute="top" secondItem="odV-n7-N1J" secondAttribute="top" id="2CD-UM-FN2"/>
                                                     <constraint firstItem="SNg-y2-o6A" firstAttribute="centerX" secondItem="odV-n7-N1J" secondAttribute="centerX" id="9vX-a3-WZY"/>
@@ -489,7 +490,7 @@
                                             <constraint firstItem="4fs-YX-QKu" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" constant="12" id="Q9R-zS-n6C"/>
                                             <constraint firstAttribute="trailing" secondItem="odV-n7-N1J" secondAttribute="trailing" constant="25" id="SPd-Fq-AuB"/>
                                             <constraint firstItem="HyE-pU-D5i" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" multiplier="0.7" id="Uc2-TG-Iij"/>
-                                            <constraint firstItem="BWJ-sI-QNA" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" constant="10" id="W2k-aR-quZ"/>
+                                            <constraint firstItem="BWJ-sI-QNA" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" priority="750" constant="10" id="W2k-aR-quZ"/>
                                             <constraint firstItem="sD1-pI-1XR" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="YQt-88-Bgt"/>
                                             <constraint firstAttribute="trailing" secondItem="XhG-Eh-4zj" secondAttribute="trailing" id="a19-zd-d9o"/>
                                             <constraint firstItem="sD1-pI-1XR" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" id="buB-1z-3aa"/>
@@ -499,7 +500,7 @@
                                             <constraint firstItem="hCA-ib-QBe" firstAttribute="top" secondItem="sD1-pI-1XR" secondAttribute="bottom" constant="14.5" id="lxn-c6-GTj"/>
                                             <constraint firstItem="BWJ-sI-QNA" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" multiplier="0.69" id="mVh-km-PIC"/>
                                             <constraint firstItem="oww-kk-0JQ" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" id="t5T-tq-Kp9"/>
-                                            <constraint firstItem="HyE-pU-D5i" firstAttribute="width" secondItem="Rur-vD-PvS" secondAttribute="width" multiplier="0.33" id="t6w-St-efl"/>
+                                            <constraint firstItem="HyE-pU-D5i" firstAttribute="width" secondItem="Rur-vD-PvS" secondAttribute="width" multiplier="0.3" id="t6w-St-efl"/>
                                             <constraint firstItem="hCA-ib-QBe" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="uh4-8X-09K"/>
                                             <constraint firstAttribute="trailing" secondItem="oww-kk-0JQ" secondAttribute="trailing" id="wSb-Gw-o5z"/>
                                             <constraint firstItem="HyE-pU-D5i" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="xAp-BL-eJO"/>
@@ -509,68 +510,68 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uez-J2-sDS">
-                                        <rect key="frame" x="-81.333333333333314" y="60" width="576.66666666666663" height="559"/>
+                                        <rect key="frame" x="49.666666666666657" y="60" width="315" height="559"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="badge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I3-pj-5Gt">
-                                                <rect key="frame" x="0.0" y="30" width="576.66666666666663" height="29.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="30" width="315" height="29.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="RuffleScriptDEMO-Regular" family="Ruffle Script DEMO" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a1" translatesAutoresizingMaskIntoConstraints="NO" id="9uy-FI-EWv">
-                                                <rect key="frame" x="19.999999999999993" y="74.666666666666657" width="80" height="100"/>
+                                                <rect key="frame" x="20.000000000000007" y="74.666666666666657" width="80" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="e1j-uM-x34"/>
                                                     <constraint firstAttribute="height" constant="100" id="pg7-mH-s8f"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 80% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือประณีต มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ9-9E-WMC">
-                                                <rect key="frame" x="108.00000000000003" y="115.66666666666666" width="448.66666666666674" height="18.333333333333343"/>
+                                                <rect key="frame" x="108" y="97.333333333333343" width="187" height="54.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a2" translatesAutoresizingMaskIntoConstraints="NO" id="Wjp-2f-CZD">
-                                                <rect key="frame" x="19.999999999999993" y="182.66666666666666" width="80" height="99.999999999999972"/>
+                                                <rect key="frame" x="20.000000000000007" y="182.66666666666666" width="80" height="99.999999999999972"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="cgz-l3-dVA"/>
                                                     <constraint firstAttribute="height" constant="100" id="vCS-2n-20k"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 50% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือดี มีเอกลักษณ์" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-1G-8Fa">
-                                                <rect key="frame" x="108.00000000000003" y="223.66666666666669" width="448.66666666666674" height="18.333333333333343"/>
+                                                <rect key="frame" x="108" y="205.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b1" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-uS-rSK">
-                                                <rect key="frame" x="19.999999999999993" y="290.66666666666669" width="80" height="100"/>
+                                                <rect key="frame" x="20.000000000000007" y="290.66666666666669" width="80" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="e1q-jr-3JA"/>
                                                     <constraint firstAttribute="width" constant="80" id="ghy-Tb-JS5"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 30% ย้อมสีธรรมชาติได้มีความแม่นยำสูง ฝีมือดี" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNw-u9-0Nb">
-                                                <rect key="frame" x="108.00000000000003" y="331.66666666666669" width="448.66666666666674" height="18.333333333333314"/>
+                                                <rect key="frame" x="108" y="313.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b2" translatesAutoresizingMaskIntoConstraints="NO" id="zZ1-Jx-XTq">
-                                                <rect key="frame" x="19.999999999999993" y="398.66666666666669" width="80" height="80"/>
+                                                <rect key="frame" x="20.000000000000007" y="398.66666666666669" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="diD-Gr-m8V"/>
                                                     <constraint firstAttribute="width" constant="80" id="f02-GJ-ACd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กลุ่มที่ผลิตวัตถุดิบเองเกิน 20% ย้อมสีธรรมชาติ ฝีมือดี มีศักยภาพในการพัฒนาในอนาคต" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsC-q6-WSO">
-                                                <rect key="frame" x="108.00000000000003" y="429.66666666666669" width="448.66666666666674" height="18.333333333333314"/>
+                                                <rect key="frame" x="108" y="411.33333333333331" width="187" height="54.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="sge-9w-0yK">
-                                                <rect key="frame" x="263.33333333333331" y="494" width="50" height="50"/>
+                                                <rect key="frame" x="132.33333333333334" y="494" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="5c5-vK-kU6"/>
                                                     <constraint firstAttribute="height" constant="50" id="LCf-F5-uzn"/>
@@ -580,6 +581,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Wjp-2f-CZD" firstAttribute="top" secondItem="9uy-FI-EWv" secondAttribute="bottom" constant="8" id="2Ko-ga-Pzp"/>
+                                            <constraint firstAttribute="width" constant="315" id="93W-th-b5L"/>
                                             <constraint firstItem="EQ9-9E-WMC" firstAttribute="centerY" secondItem="9uy-FI-EWv" secondAttribute="centerY" id="B0f-lV-xUT"/>
                                             <constraint firstAttribute="trailing" secondItem="EQ9-9E-WMC" secondAttribute="trailing" constant="20" id="Cep-ch-tXY"/>
                                             <constraint firstItem="bsC-q6-WSO" firstAttribute="leading" secondItem="zZ1-Jx-XTq" secondAttribute="trailing" constant="8" id="DGn-kz-HdY"/>
@@ -611,28 +613,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-hn-iSA">
-                                        <rect key="frame" x="30" y="60" width="354" height="357.33333333333331"/>
+                                        <rect key="frame" x="49.666666666666657" y="60" width="315" height="357.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJU-ZU-h88">
-                                                <rect key="frame" x="0.0" y="15" width="354" height="33.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="15" width="315" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5R-ir-n9E">
-                                                <rect key="frame" x="20" y="63.333333333333314" width="314" height="180"/>
+                                                <rect key="frame" x="20" y="63.333333333333314" width="275" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="WbP-ix-Zy1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-jh-0ZJ">
-                                                <rect key="frame" x="20" y="258.33333333333331" width="314" height="26"/>
+                                                <rect key="frame" x="20" y="258.33333333333331" width="275" height="26"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-Kn-mwr">
-                                                <rect key="frame" x="152" y="292.33333333333331" width="50" height="50"/>
+                                                <rect key="frame" x="132.33333333333334" y="292.33333333333331" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="h1i-o4-iYh"/>
                                                     <constraint firstAttribute="width" constant="50" id="pjT-s8-Njh"/>
@@ -642,6 +644,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="c5R-ir-n9E" secondAttribute="trailing" constant="20" id="4Ck-OC-LcM"/>
+                                            <constraint firstAttribute="width" constant="315" id="5zP-YQ-HdJ"/>
                                             <constraint firstItem="5ff-jh-0ZJ" firstAttribute="top" secondItem="c5R-ir-n9E" secondAttribute="bottom" constant="15" id="7jV-9Y-Dd4"/>
                                             <constraint firstAttribute="trailing" secondItem="SJU-ZU-h88" secondAttribute="trailing" id="E3r-iP-NBt"/>
                                             <constraint firstItem="c5R-ir-n9E" firstAttribute="leading" secondItem="bbb-hn-iSA" secondAttribute="leading" constant="20" id="EcN-p6-Jga"/>
@@ -658,17 +661,13 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="bbb-hn-iSA" firstAttribute="leading" secondItem="v0M-XC-s1A" secondAttribute="leading" priority="750" constant="30" id="3AJ-Hm-VB5"/>
                                     <constraint firstItem="uez-J2-sDS" firstAttribute="top" secondItem="v0M-XC-s1A" secondAttribute="top" constant="60" id="45d-BK-Pbc"/>
                                     <constraint firstItem="Rur-vD-PvS" firstAttribute="top" secondItem="v0M-XC-s1A" secondAttribute="top" id="55Q-tX-IX6"/>
-                                    <constraint firstAttribute="trailing" secondItem="bbb-hn-iSA" secondAttribute="trailing" priority="750" constant="30" id="77r-x2-L9h"/>
                                     <constraint firstItem="hCA-ib-QBe" firstAttribute="width" secondItem="Rur-vD-PvS" secondAttribute="width" id="9WT-tY-Uc3"/>
                                     <constraint firstItem="bbb-hn-iSA" firstAttribute="top" secondItem="v0M-XC-s1A" secondAttribute="top" constant="60" id="Br2-Id-AAk"/>
-                                    <constraint firstAttribute="trailing" secondItem="uez-J2-sDS" secondAttribute="trailing" priority="750" constant="30" id="amU-Ln-n1X"/>
                                     <constraint firstItem="bbb-hn-iSA" firstAttribute="centerX" secondItem="v0M-XC-s1A" secondAttribute="centerX" id="bw8-kf-3ps"/>
                                     <constraint firstItem="Rur-vD-PvS" firstAttribute="leading" secondItem="v0M-XC-s1A" secondAttribute="leading" priority="750" id="ds0-5D-wxU"/>
                                     <constraint firstItem="Rur-vD-PvS" firstAttribute="width" secondItem="v0M-XC-s1A" secondAttribute="width" id="fwx-rR-th7"/>
-                                    <constraint firstItem="uez-J2-sDS" firstAttribute="leading" secondItem="v0M-XC-s1A" secondAttribute="leading" priority="750" constant="30" id="ilL-1a-4hM"/>
                                     <constraint firstItem="uez-J2-sDS" firstAttribute="centerX" secondItem="v0M-XC-s1A" secondAttribute="centerX" id="m6w-r1-32A"/>
                                     <constraint firstAttribute="trailing" secondItem="Rur-vD-PvS" secondAttribute="trailing" priority="750" id="sUh-eQ-TDr"/>
                                     <constraint firstAttribute="bottom" secondItem="Rur-vD-PvS" secondAttribute="bottom" id="ya4-8d-TH8"/>
