@@ -43,7 +43,7 @@ class QRViewController: UIViewController {
     
     @objc func tapQuestion() {
         howModal.isHidden = false
-        
+        self.view.bringSubview(toFront: self.howModal)
     }
     
     @objc func tapCloseModal() {

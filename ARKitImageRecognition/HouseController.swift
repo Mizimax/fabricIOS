@@ -225,11 +225,20 @@ class HouseController: UIViewController {
         
         let colors = self.myHouse["house_color"] as! String
         let colorList = colors.toJSON() as! [[String: Any]]
-        
-        
+        let screenWidth = self.view.frame.size.width
+        var contentX = 0
+        var contentWidth = 0
+        if(screenWidth > 414) {
+            contentX = Int((screenWidth/2)-212)
+            contentWidth = 414
+        }
+        else {
+            contentX = Int((screenWidth/2)-screenWidth/2+20)
+            contentWidth = Int(self.view.frame.size.width-40)
+        }
         var yColor: CGFloat = 0
         for color in colorList {
-            let button = UIImageView(frame: CGRect(x: 35, y: yColor, width: self.view.frame.size.width-70, height: 30))
+            let button = UIImageView(frame: CGRect(x: contentX, y: Int(yColor), width: contentWidth, height: 30))
             button.backgroundColor = hexStringToUIColor(hex: color["color_code"] as! String)
             let tapGestureRecognizer = MyTapGesture(target: self, action: #selector(imageTapped))
             button.isUserInteractionEnabled = true
@@ -251,7 +260,7 @@ class HouseController: UIViewController {
         
         
         
-        let detailTitle = UILabel(frame: CGRect(x: 0, y: yColor+15, width: self.view.frame.size.width, height: 22))
+        let detailTitle = UILabel(frame: CGRect(x: contentX, y: Int(yColor+15), width: contentWidth, height: 22))
         detailTitle.font =  UIFont(name: "RuffleScriptDEMO-Regular", size: 26)
         detailTitle.text = "about house"
         detailTitle.textAlignment = .center
@@ -260,7 +269,7 @@ class HouseController: UIViewController {
         
         let detail = self.myHouse["house_detail"] as! String
         
-        let detailLabel = UILabel(frame: CGRect(x: 35, y: yColor+50, width: self.view.frame.size.width-70, height: 0))
+        let detailLabel = UILabel(frame: CGRect(x: contentX, y: Int(yColor+50), width: contentWidth, height: 0))
         detailLabel.numberOfLines = 0
         detailLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         
@@ -279,10 +288,13 @@ class HouseController: UIViewController {
 //    print(self.colorView.frame.height)
         
 //        self.colorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        
-        
-        self.profileImage.maskCirclePercentage(percent: 0.33, parent: self.view)
-        
+
+//        if(self.profileImage.frame.width < 200){
+            self.profileImage.maskCirclePercentage(percent: 0.33, parent: self.view)
+//        }
+//        else{
+//            self.profileImage.layer.cornerRadius = 100;
+//        }
         self.modalHouse.text = self.myHouse["house_name"] as! String
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeModal))
