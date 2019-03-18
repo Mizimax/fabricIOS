@@ -42,7 +42,7 @@ class ViewController: UIViewController, MyProtocol {
     @IBOutlet weak var leftArrow: UIImageView!
     
     @IBAction func download(_ sender: Any) {
-        guard let url = URL(string: "http://thaicolorid.dss.go.th/postcard/1.png" as! String) else {
+        guard let url = URL(string: "https://thaicolorid.dss.go.th/postcard/1.png" as! String) else {
             return //be safe
         }; UIApplication.shared.openURL(url);
     
@@ -104,7 +104,7 @@ class ViewController: UIViewController, MyProtocol {
     }
     
     @objc func tapPrivacy() {
-        guard let url = URL(string: "http://thaicolorid.dss.go.th/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
+        guard let url = URL(string: "https://thaicolorid.dss.go.th/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
             return //be safe
         }; UIApplication.shared.openURL(url);
         
@@ -269,7 +269,7 @@ extension ViewController: ARSCNViewDelegate {
         let plane = SCNPlane(width: referenceImage.physicalSize.width, height: referenceImage.physicalSize.height)
         let planeNode = SCNNode(geometry: plane)
         planeNode.eulerAngles.x = -.pi / 2
-        if let videoURL = URL(string: "http://thaicolorid.dss.go.th/vdoar/" + imageName[...1] + "/" + imageName[2...] + ".mp4"){
+        if let videoURL = URL(string: "https://thaicolorid.dss.go.th/vdoar/" + imageName[...1] + "/" + imageName[2...] + ".mp4"){
             
             setupVideoOnNode(planeNode, fromURL: videoURL)
         }

@@ -35,7 +35,7 @@ class QRViewController: UIViewController {
     var myHouse: [String: Any] = [:]
 
     @objc func tapPrivacy() {
-        guard let url = URL(string: "http://thaicolorid.dss.go.th/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
+        guard let url = URL(string: "https://thaicolorid.dss.go.th/PrivacyPolicy/PrivacyPolicy.pdf" as! String) else {
             return //be safe
         }; UIApplication.shared.openURL(url);
         
@@ -192,7 +192,7 @@ extension QRViewController: AVCaptureMetadataOutputObjectsDelegate {
                 
                 self.view.addSubview(progressHUD)
                     self.captureSession?.stopRunning()
-                let url = URL(string: "http://thaicolorid.dss.go.th/api/v1/house/"+metadataObj.stringValue!)
+                let url = URL(string: "https://thaicolorid.dss.go.th/api/v1/house/"+metadataObj.stringValue!)
                 let task = URLSession.shared.dataTask(with: url!) {(data, response, error ) in
                     
                     

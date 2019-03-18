@@ -76,7 +76,7 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func parseJSON () {
         
-        let url = URL(string: "http://thaicolorid.dss.go.th/api/v1/houses")
+        let url = URL(string: "https://thaicolorid.dss.go.th/api/v1/houses")
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error ) in
             
             print(error)
