@@ -290,7 +290,7 @@ class HouseController: UIViewController {
 //        self.colorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
 
 //        if(self.profileImage.frame.width < 200){
-            self.profileImage.maskCirclePercentage(percent: 0.3, parent: self.view)
+            self.profileImage.maskCirclePercentage(percent: 0.33, parent: self.view)
 //        }
 //        else{
 //            self.profileImage.layer.cornerRadius = 100;

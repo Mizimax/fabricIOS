@@ -26,10 +26,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jTJ-Mu-0d1">
-                                <rect key="frame" x="0.0" y="465" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="462" width="414" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cannot detect camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQf-dZ-XRe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26"/>
                                         <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -132,22 +132,22 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-5j-MFL">
-                                        <rect key="frame" x="49.666666666666657" y="229.33333333333334" width="315" height="403.33333333333326"/>
+                                        <rect key="frame" x="49.666666666666657" y="224.99999999999997" width="315" height="412.33333333333326"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how to use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23I-ci-kMV">
-                                                <rect key="frame" x="0.0" y="20.000000000000004" width="315" height="37.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="20" width="315" height="29.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="RuffleScriptDEMO-Regular" family="Ruffle Script DEMO" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-UX-kzf">
-                                                <rect key="frame" x="20" y="67.333333333333343" width="275" height="150"/>
+                                                <rect key="frame" x="20" y="59.666666666666686" width="275" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="P4p-WS-seB"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-m8-urG">
-                                                <rect key="frame" x="132.33333333333334" y="338.33333333333326" width="50" height="50"/>
+                                                <rect key="frame" x="132.33333333333334" y="347.33333333333337" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="aRR-1R-4m6"/>
                                                     <constraint firstAttribute="height" constant="50" id="tMi-Ne-sni"/>
@@ -155,7 +155,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq4-k6-MLN">
                                                 <rect key="frame" x="20" y="217" width="275" height="115"/>
-                                                <string key="text">Scan picture in a postcard that we provided. App will show AR video about house. Postcard which contain AR and QR are downloadable in www.thaicolorid.com</string>
+                                                <string key="text">Scan picture in a postcard that we provided. App will show AR video about house. Postcard which contain AR and QR are downloadable in thaicolorid.dss.go.th</string>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="12"/>
                                                 <color key="textColor" red="0.19986930489999999" green="0.28342944380000001" blue="0.43923366069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -384,10 +384,10 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fs-YX-QKu">
-                                                <rect key="frame" x="269" y="281" width="50" height="50"/>
+                                                <rect key="frame" x="265.33333333333331" y="281" width="50" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-Fd-9bZ">
-                                                        <rect key="frame" x="12.666666666666686" y="0.0" width="25" height="20"/>
+                                                        <rect key="frame" x="12.333333333333371" y="0.0" width="25" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="9qX-da-bqu"/>
                                                             <constraint firstAttribute="width" constant="25" id="vuM-iJ-JDt"/>
@@ -412,36 +412,35 @@
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWJ-sI-QNA">
-                                                <rect key="frame" x="10" y="185.66666666666663" width="125" height="143"/>
+                                                <rect key="frame" x="33.000000000000007" y="202.00000000000003" width="95.666666666666686" height="109.33333333333334"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="175" id="fbC-i1-1V7"/>
                                                     <constraint firstAttribute="width" secondItem="BWJ-sI-QNA" secondAttribute="height" multiplier="83:95" id="kZL-f5-skq"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-pU-D5i">
-                                                <rect key="frame" x="145" y="188.33333333333334" width="124" height="124.33333333333334"/>
+                                                <rect key="frame" x="138.66666666666669" y="188.33333333333337" width="136.66666666666669" height="136.66666666666663"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HyE-pU-D5i" secondAttribute="height" multiplier="1:1" id="odJ-oC-FdZ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="color id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-pI-1XR">
-                                                <rect key="frame" x="0.0" y="380" width="414" height="24"/>
+                                                <rect key="frame" x="0.0" y="410.33333333333331" width="414" height="24"/>
                                                 <fontDescription key="fontDescription" name="RuffleScriptDEMO-Regular" family="Ruffle Script DEMO" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oww-kk-0JQ">
-                                                <rect key="frame" x="0.0" y="334.66666666666669" width="414" height="30.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="365" width="414" height="30.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odV-n7-N1J">
-                                                <rect key="frame" x="319" y="281" width="70" height="50"/>
+                                                <rect key="frame" x="315.33333333333331" y="281" width="70" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="SNg-y2-o6A">
-                                                        <rect key="frame" x="22.666666666666686" y="0.0" width="25" height="25"/>
+                                                        <rect key="frame" x="22.333333333333371" y="0.0" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="2HK-NV-bPf"/>
                                                             <constraint firstAttribute="width" constant="25" id="aTN-EK-MqM"/>
@@ -483,24 +482,25 @@
                                             <constraint firstItem="hCA-ib-QBe" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" priority="750" id="66K-RF-BUe"/>
                                             <constraint firstItem="XhG-Eh-4zj" firstAttribute="top" secondItem="Rur-vD-PvS" secondAttribute="top" id="8H8-co-8JZ"/>
                                             <constraint firstItem="HyE-pU-D5i" firstAttribute="leading" secondItem="BWJ-sI-QNA" secondAttribute="trailing" constant="10" id="8IB-9e-lsA"/>
-                                            <constraint firstItem="oww-kk-0JQ" firstAttribute="top" secondItem="HyE-pU-D5i" secondAttribute="bottom" constant="22" id="An7-aS-8sf"/>
+                                            <constraint firstItem="oww-kk-0JQ" firstAttribute="top" secondItem="HyE-pU-D5i" secondAttribute="bottom" constant="40" id="An7-aS-8sf"/>
                                             <constraint firstItem="XhG-Eh-4zj" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" id="C1v-Vg-k7a"/>
                                             <constraint firstAttribute="bottom" secondItem="hCA-ib-QBe" secondAttribute="bottom" id="Ebe-8x-M1w"/>
                                             <constraint firstAttribute="trailing" secondItem="hCA-ib-QBe" secondAttribute="trailing" priority="750" id="P0z-Uq-eKa"/>
                                             <constraint firstItem="4fs-YX-QKu" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" constant="12" id="Q9R-zS-n6C"/>
-                                            <constraint firstAttribute="trailing" secondItem="odV-n7-N1J" secondAttribute="trailing" constant="25" id="SPd-Fq-AuB"/>
+                                            <constraint firstItem="4fs-YX-QKu" firstAttribute="trailing" secondItem="odV-n7-N1J" secondAttribute="leading" id="SPd-Fq-AuB"/>
                                             <constraint firstItem="HyE-pU-D5i" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" multiplier="0.7" id="Uc2-TG-Iij"/>
                                             <constraint firstItem="BWJ-sI-QNA" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" priority="750" constant="10" id="W2k-aR-quZ"/>
                                             <constraint firstItem="sD1-pI-1XR" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="YQt-88-Bgt"/>
                                             <constraint firstAttribute="trailing" secondItem="XhG-Eh-4zj" secondAttribute="trailing" id="a19-zd-d9o"/>
                                             <constraint firstItem="sD1-pI-1XR" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" id="buB-1z-3aa"/>
+                                            <constraint firstItem="BWJ-sI-QNA" firstAttribute="centerY" secondItem="HyE-pU-D5i" secondAttribute="centerY" id="dln-FF-hQx"/>
                                             <constraint firstItem="sD1-pI-1XR" firstAttribute="top" secondItem="oww-kk-0JQ" secondAttribute="bottom" constant="15" id="eNZ-f0-ZRD"/>
-                                            <constraint firstItem="odV-n7-N1J" firstAttribute="leading" secondItem="4fs-YX-QKu" secondAttribute="trailing" id="fKE-3x-6R5"/>
+                                            <constraint firstItem="HyE-pU-D5i" firstAttribute="trailing" secondItem="4fs-YX-QKu" secondAttribute="leading" constant="10" id="fKE-3x-6R5"/>
                                             <constraint firstAttribute="trailing" secondItem="sD1-pI-1XR" secondAttribute="trailing" id="kQh-8l-kUR"/>
                                             <constraint firstItem="hCA-ib-QBe" firstAttribute="top" secondItem="sD1-pI-1XR" secondAttribute="bottom" constant="14.5" id="lxn-c6-GTj"/>
-                                            <constraint firstItem="BWJ-sI-QNA" firstAttribute="top" secondItem="XhG-Eh-4zj" secondAttribute="bottom" multiplier="0.69" id="mVh-km-PIC"/>
+                                            <constraint firstItem="BWJ-sI-QNA" firstAttribute="width" secondItem="HyE-pU-D5i" secondAttribute="width" multiplier="0.7" id="nBQ-iW-lPf"/>
                                             <constraint firstItem="oww-kk-0JQ" firstAttribute="leading" secondItem="Rur-vD-PvS" secondAttribute="leading" id="t5T-tq-Kp9"/>
-                                            <constraint firstItem="HyE-pU-D5i" firstAttribute="width" secondItem="Rur-vD-PvS" secondAttribute="width" multiplier="0.3" id="t6w-St-efl"/>
+                                            <constraint firstItem="HyE-pU-D5i" firstAttribute="width" secondItem="Rur-vD-PvS" secondAttribute="width" multiplier="0.33" id="t6w-St-efl"/>
                                             <constraint firstItem="hCA-ib-QBe" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="uh4-8X-09K"/>
                                             <constraint firstAttribute="trailing" secondItem="oww-kk-0JQ" secondAttribute="trailing" id="wSb-Gw-o5z"/>
                                             <constraint firstItem="HyE-pU-D5i" firstAttribute="centerX" secondItem="Rur-vD-PvS" secondAttribute="centerX" id="xAp-BL-eJO"/>
@@ -840,29 +840,29 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myf-ZG-05R">
-                                        <rect key="frame" x="49.666666666666657" y="202.66666666666663" width="315" height="413"/>
+                                        <rect key="frame" x="49.666666666666657" y="215.33333333333334" width="315" height="387.33333333333326"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how to use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcU-M5-Tec">
-                                                <rect key="frame" x="0.0" y="20.000000000000028" width="315" height="29.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="20.000000000000004" width="315" height="37.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="RuffleScriptDEMO-Regular" family="Ruffle Script DEMO" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="q5L-Ce-fEm">
-                                                <rect key="frame" x="20" y="59.666666666666657" width="275" height="199.99999999999997"/>
+                                                <rect key="frame" x="20" y="67.333333333333371" width="275" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="El4-kb-92s"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="v9a-pf-KV3">
-                                                <rect key="frame" x="132.33333333333334" y="348" width="50" height="50"/>
+                                                <rect key="frame" x="132.33333333333334" y="322.33333333333331" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Dpj-Xt-flF"/>
                                                     <constraint firstAttribute="height" constant="50" id="ubR-Fe-ONc"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code in a card that we provided you will get more house detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE4-hg-IzK">
-                                                <rect key="frame" x="20" y="269.66666666666674" width="275" height="68.333333333333314"/>
+                                                <rect key="frame" x="20" y="277.33333333333331" width="275" height="35"/>
                                                 <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
                                                 <color key="textColor" red="0.19986930489999999" green="0.28342944380000001" blue="0.43923366069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -898,10 +898,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SI6-Pf-hAg">
-                                <rect key="frame" x="0.0" y="440" width="414" height="26"/>
+                                <rect key="frame" x="0.0" y="443" width="414" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cannot detect camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtZ-K4-Nsr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                                         <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
